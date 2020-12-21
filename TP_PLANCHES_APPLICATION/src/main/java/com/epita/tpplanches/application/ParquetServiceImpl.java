@@ -22,4 +22,8 @@ public class ParquetServiceImpl implements ParquetService {
 		
 	}
 
+	public Parquet getParquet(long id) {
+		return daoParquet.getParquet(id);
+	}
+
 }
