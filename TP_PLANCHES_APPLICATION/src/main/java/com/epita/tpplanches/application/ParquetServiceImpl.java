@@ -13,6 +13,7 @@ public class ParquetServiceImpl implements ParquetService {
 	private DaoParquet daoParquet;
 	
 	public void calculPlanche(String nomPiece,double surface) {
+		
 		Parquet parquet = new Parquet();
 		parquet.setNomPiece(nomPiece);
 		parquet.setSurface(surface);

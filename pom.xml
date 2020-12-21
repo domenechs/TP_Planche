@@ -4,6 +4,12 @@
   <artifactId>TP_PLANCHES</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  
+  <properties>
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  	<maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
   <modules>
   	<module>TP_PLANCHES_INFRA</module>
   	<module>TP_PLANCHES_DOMAIN</module>
@@ -15,7 +21,7 @@
   <dependencies>
   	<dependency>
   		<groupId>org.springframework.boot</groupId>
-  		<artifactId>spring-boot-starter-web</artifactId>
+  		<artifactId>spring-boot-starter</artifactId>
   		<version>2.4.1</version>
   		<type>module</type>
   	</dependency>
