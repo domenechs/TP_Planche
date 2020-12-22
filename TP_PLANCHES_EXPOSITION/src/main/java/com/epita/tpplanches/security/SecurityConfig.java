@@ -31,9 +31,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception {
 		http.httpBasic().and()
 			.authorizeRequests()
-			.antMatchers(HttpMethod.POST,"Planche/calcul/**").hasRole("USERS")
-			.antMatchers(HttpMethod.GET,"Planche/planche/*").hasRole("ADMIN")
-			.antMatchers(HttpMethod.GET,"Planche/planche").hasRole("ADMIN")
+			.antMatchers(HttpMethod.POST,"/Planche/calcul/**").hasRole("USER")
+			.antMatchers(HttpMethod.GET,"/Planche/planche/*").hasRole("ADMIN")
+			.antMatchers(HttpMethod.GET,"/Planche/planche").hasRole("ADMIN")
 			.and()
 			.csrf().disable()
 			.formLogin().disable();
