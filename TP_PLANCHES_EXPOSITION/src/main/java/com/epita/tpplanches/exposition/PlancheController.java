@@ -1,5 +1,7 @@
 package com.epita.tpplanches.exposition;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,6 +27,11 @@ public class PlancheController {
 	@GetMapping(value="/planche/{id}")
 	public Parquet getParquet(@PathVariable long id) {
 		return parquetService.getParquet(id);
+	}
+	
+	@GetMapping(value="/planche")
+	public List<Parquet> getAllParquet(){
+		return parquetService.getAllParquet();
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.epita.tpplanches.application;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +26,10 @@ public class ParquetServiceImpl implements ParquetService {
 
 	public Parquet getParquet(long id) {
 		return daoParquet.getParquet(id);
+	}
+
+	public List<Parquet> getAllParquet() {
+		return daoParquet.getAllParquet();
 	}
 
 }

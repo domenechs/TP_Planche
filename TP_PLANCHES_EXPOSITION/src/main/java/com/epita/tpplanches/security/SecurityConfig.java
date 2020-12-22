@@ -33,6 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.authorizeRequests()
 			.antMatchers(HttpMethod.POST,"Planche/calcul/**").hasRole("USERS")
 			.antMatchers(HttpMethod.GET,"Planche/planche/*").hasRole("ADMIN")
+			.antMatchers(HttpMethod.GET,"Planche/planche").hasRole("ADMIN")
 			.and()
 			.csrf().disable()
 			.formLogin().disable();

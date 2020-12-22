@@ -1,5 +1,7 @@
 package com.epita.tpplanches.infrastructure;
 
+import java.util.List;
+
 import javax.persistence.Query;
 
 import org.hibernate.Session;
@@ -28,6 +30,17 @@ public class DaoParquetImpl implements DaoParquet {
 		Query query = sessionParquet.createQuery("select p from Parquet p where p.id=:id");
 		query.setParameter("id", id);
 		Parquet parquet = (Parquet) query.getSingleResult();
+		sessionParquet.getTransaction().commit();
+		sessionParquet.close();
+		return parquet;
+	}
+
+	public List<Parquet> getAllParquet() {
+		SessionFactory session = HibernateUtil.getSessionFactory();
+		Session sessionParquet = session.openSession();
+		sessionParquet.beginTransaction();
+		Query query = sessionParquet.createQuery("select p from Parquet p");
+		List<Parquet> parquet = query.getResultList();
 		sessionParquet.getTransaction().commit();
 		sessionParquet.close();
 		return parquet;
