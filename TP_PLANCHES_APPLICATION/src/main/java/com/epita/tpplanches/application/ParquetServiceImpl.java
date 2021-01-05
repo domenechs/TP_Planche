@@ -20,16 +20,20 @@ public class ParquetServiceImpl implements ParquetService {
 		parquet.setNomPiece(nomPiece);
 		parquet.setSurface(surface);
 		parquet.setNombrePlanche(Calcul.calculerNombrePlanche(surface));
-		daoParquet.saveParquet(parquet);
+		daoParquet.save(parquet);
 		
 	}
 
-	public Parquet getParquet(long id) {
-		return daoParquet.getParquet(id);
+	public Parquet getParquetByName(String nom) {
+		return daoParquet.findByNomPiece(nom);
+	}
+
+	/*public Parquet getParquet(long id) {
+		return daoParquet.findById(id);
 	}
 
 	public List<Parquet> getAllParquet() {
-		return daoParquet.getAllParquet();
-	}
+		return daoParquet.findAll();
+	}*/
 
 }

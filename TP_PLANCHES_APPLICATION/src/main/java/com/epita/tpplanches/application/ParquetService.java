@@ -7,7 +7,8 @@ import com.epita.tpplanches.domain.Parquet;
 public interface ParquetService {
 	
 	void calculPlanche(String nomPiece,double surface);
-	Parquet getParquet(long id);
-	List<Parquet> getAllParquet();
+	/*Parquet getParquet(long id);
+	List<Parquet> getAllParquet();*/
+	Parquet getParquetByName(String nom);
 
 }

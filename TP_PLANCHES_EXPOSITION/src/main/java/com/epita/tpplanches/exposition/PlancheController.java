@@ -24,7 +24,7 @@ public class PlancheController {
 		parquetService.calculPlanche(nomPiece, surface);
 	}
 	
-	@GetMapping(value="/planche/{id}")
+	/*@GetMapping(value="/planche/{id}")
 	public Parquet getParquet(@PathVariable long id) {
 		return parquetService.getParquet(id);
 	}
@@ -32,6 +32,10 @@ public class PlancheController {
 	@GetMapping(value="/planche")
 	public List<Parquet> getAllParquet(){
 		return parquetService.getAllParquet();
+	}*/
+	
+	@GetMapping(value="/planche/{name}")
+	public Parquet getParquet(@PathVariable String name) {
+		return parquetService.getParquetByName(name);
 	}
-
 }

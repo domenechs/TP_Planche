@@ -15,6 +15,7 @@
   	<module>TP_PLANCHES_DOMAIN</module>
   	<module>TP_PLANCHES_APPLICATION</module>
   	<module>TP_PLANCHES_EXPOSITION</module>
+  	<module>TP_PLANCHES_INFRA_SPRINGDATA</module>
   </modules>
   
  
